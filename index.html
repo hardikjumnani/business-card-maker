@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card Maker</title>
+</head>
+<body>
+    <nav class="manage-element">
+        <div class="add-element">
+            <div class="text-element"></div>
+            <div class="image-element"></div>
+            <div class="shapes-element"></div>
+        </div>
+        <div class="tools">
+            <!-- Text Element -->
+            <div class="font-style">
+                <select name="font-style" id="font-style">
+                    <option value="calibra">Calibra</option>
+                </select>
+            </div>
+            <div class="font-size">
+                <input type="number" name="font-size" id="font-size">
+            </div>
+
+            <div class="bold"></div>
+            <div class="italic"></div>
+            <div class="underline"></div>
+
+            <div class="font-color"></div>
+            <div class="font-background-color"></div>
+
+            <div class="text-align">
+                <div class="left-align"></div>
+                <div class="center-align"></div>
+                <div class="right-align"></div>
+            </div>
+
+            <!-- Image Element -->
+            <div class="border-style">
+                <div class="border-width">
+                    <input class="slider" type="range" name="border-width" id="border-width" start="0" end="100">
+                </div>
+                <div class="border-type">
+                    <div class="dotted"></div>
+                    <div class="dashed"></div>
+                    <div class="solid"></div>
+                    <div class="double"></div>
+                    <div class="ridge"></div>
+                </div>
+                <div class="border-radius">
+                    <input class="slider" type="range" name="border-radius" id="border-radius" start="0" end="100" value="0">
+                    <input type="number" name="border-radius" id="border-radius-number">
+                </div>
+            </div>
+            <div class="flip">
+                <div class="flip-horizontal"></div>
+                <div class="flip-vertical"></div>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
