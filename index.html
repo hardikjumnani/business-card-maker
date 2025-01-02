@@ -8,9 +8,9 @@
 <body>
     <nav class="manage-element">
         <div class="add-element">
-            <div class="text-element"></div>
-            <div class="image-element"></div>
-            <div class="shapes-element"></div>
+            <div class="text-element"><img src="./images/add-text-element.png" alt="Text"></div>
+            <div class="image-element"><img src="./images/add-image-element.png" alt="Image"></div>
+            <div class="shapes-element"><img src="./images/add-shape-element.png" alt="Shapes"></div>
         </div>
         <div class="tools">
             <!-- Text Element -->
@@ -23,17 +23,21 @@
                 <input type="number" name="font-size" id="font-size">
             </div>
 
-            <div class="bold"></div>
-            <div class="italic"></div>
-            <div class="underline"></div>
+            <div class="text-decoration">
+                <div class="bold"><img src="./images/bold.png" alt="Bold"></div>
+                <div class="italic"><img src="./images/italic.png" alt="Italic"></div>
+                <div class="underline"><img src="./images/underline.png" alt="Underline"></div>
+            </div>
 
-            <div class="font-color"></div>
-            <div class="font-background-color"></div>
+            <div class="color">
+                <div class="font-color"><div></div></div>
+                <div class="font-background-color"><div></div></div>
+            </div>
 
             <div class="text-align">
-                <div class="left-align"></div>
-                <div class="center-align"></div>
-                <div class="right-align"></div>
+                <div class="left-align"><img src="./images/left-align.png" alt="Left"></div>
+                <div class="center-align"><img src="./images/center-align.png" alt="Center"></div>
+                <div class="right-align"><img src="./images/right-align.png" alt="Right"></div>
             </div>
 
             <!-- Image Element -->
@@ -42,11 +46,11 @@
                     <input class="slider" type="range" name="border-width" id="border-width" start="0" end="100">
                 </div>
                 <div class="border-type">
-                    <div class="dotted"></div>
-                    <div class="dashed"></div>
-                    <div class="solid"></div>
-                    <div class="double"></div>
-                    <div class="ridge"></div>
+                    <div class="dotted"><div class="border-div"></div></div>
+                    <div class="dashed"><div class="border-div"></div></div>
+                    <div class="solid"><div class="border-div"></div></div>
+                    <div class="double"><div class="border-div"></div></div>
+                    <div class="ridge"><div class="border-div"></div></div>
                 </div>
                 <div class="border-radius">
                     <input class="slider" type="range" name="border-radius" id="border-radius" start="0" end="100" value="0">
@@ -54,8 +58,8 @@
                 </div>
             </div>
             <div class="flip">
-                <div class="flip-horizontal"></div>
-                <div class="flip-vertical"></div>
+                <div class="flip-horizontal"><img src="./images/flip-horizontal.png" alt="Horizontal"></div>
+                <div class="flip-vertical"><img src="./images/flip-vertical.png" alt="Vertical"></div>
             </div>
         </div>
     </nav>
@@ -63,7 +67,7 @@
     <div class="edit-board">
         <main class="business-card">
             <canvas id="business-card">
-                
+
             </canvas>
         </main>
     </div>

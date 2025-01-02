@@ -1,0 +1,9 @@
+FEATURE IDEAS
+
+Text - Font color, font size, underline, bold, italic, font style, align, background color
+Image - corner radius, border style, flip
+Shapes - Rectangle, oval, triangle || stroke, fill, shadow
+
+- Lock elements
+- Resize elements
+- Rotate elements
