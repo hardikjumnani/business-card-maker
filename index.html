@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Card Maker</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <nav class="manage-element">
         <div class="add-element">
-            <div class="text-element"><img src="./images/add-text-element.png" alt="Text"></div>
-            <div class="image-element"><img src="./images/add-image-element.png" alt="Image"></div>
-            <div class="shapes-element"><img src="./images/add-shape-element.png" alt="Shapes"></div>
+            <div class="text-element"><img class="nav-icon" src="./images/add-text-element.png" alt="Text"></div>
+            <div class="image-element"><img class="nav-icon" src="./images/add-image-element.png" alt="Image"></div>
+            <div class="shapes-element"><img class="nav-icon" src="./images/add-shape-element.png" alt="Shapes"></div>
         </div>
         <div class="tools">
             <!-- Text Element -->
@@ -23,43 +25,44 @@
                 <input type="number" name="font-size" id="font-size">
             </div>
 
-            <div class="text-decoration">
-                <div class="bold"><img src="./images/bold.png" alt="Bold"></div>
-                <div class="italic"><img src="./images/italic.png" alt="Italic"></div>
-                <div class="underline"><img src="./images/underline.png" alt="Underline"></div>
+            <div class="text-decoration nav-group">
+                <div class="bold"><img class="nav-icon" src="./images/bold.png" alt="Bold"></div>
+                <div class="italic"><img class="nav-icon" src="./images/italic.png" alt="Italic"></div>
+                <div class="underline"><img class="nav-icon" src="./images/underline.png" alt="Underline"></div>
             </div>
 
-            <div class="color">
+            <div class="color nav-group">
                 <div class="font-color"><div></div></div>
                 <div class="font-background-color"><div></div></div>
             </div>
 
-            <div class="text-align">
-                <div class="left-align"><img src="./images/left-align.png" alt="Left"></div>
-                <div class="center-align"><img src="./images/center-align.png" alt="Center"></div>
-                <div class="right-align"><img src="./images/right-align.png" alt="Right"></div>
+            <div class="text-align nav-group">
+                <div class="left-align"><img class="nav-icon" src="./images/left-align.png" alt="Left"></div>
+                <div class="center-align"><img class="nav-icon" src="./images/center-align.png" alt="Center"></div>
+                <div class="right-align"><img class="nav-icon" src="./images/right-align.png" alt="Right"></div>
             </div>
 
             <!-- Image Element -->
             <div class="border-style">
                 <div class="border-width">
+                    <div id="border-width-icon"></div>
                     <input class="slider" type="range" name="border-width" id="border-width" start="0" end="100">
                 </div>
                 <div class="border-type">
-                    <div class="dotted"><div class="border-div"></div></div>
-                    <div class="dashed"><div class="border-div"></div></div>
-                    <div class="solid"><div class="border-div"></div></div>
-                    <div class="double"><div class="border-div"></div></div>
-                    <div class="ridge"><div class="border-div"></div></div>
+                    <div class="border-solid"><div class="border-div" data-border="solid"></div></div>
+                    <div class="border-dotted"><div class="border-div" data-border="dotted"></div></div>
+                    <div class="border-dashed"><div class="border-div" data-border="dashed"></div></div>
+                    <div class="border-ridge"><div class="border-div" data-border="ridge"></div></div>
+                    <div class="border-groove"><div class="border-div" data-border="groove"></div></div>
                 </div>
                 <div class="border-radius">
+                    <div id="border-radius-icon"></div>
                     <input class="slider" type="range" name="border-radius" id="border-radius" start="0" end="100" value="0">
-                    <input type="number" name="border-radius" id="border-radius-number">
                 </div>
             </div>
-            <div class="flip">
-                <div class="flip-horizontal"><img src="./images/flip-horizontal.png" alt="Horizontal"></div>
-                <div class="flip-vertical"><img src="./images/flip-vertical.png" alt="Vertical"></div>
+            <div class="flip nav-group">
+                <div class="flip-horizontal"><img class="nav-icon" src="./images/flip-horizontal.png" alt="Horizontal"></div>
+                <div class="flip-vertical"><img class="nav-icon" src="./images/flip-vertical.png" alt="Vertical"></div>
             </div>
         </div>
     </nav>

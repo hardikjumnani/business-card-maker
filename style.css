@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+}
+
+/* Navbar */
+nav {
+    background-color: #ffe4c4;
+    height: 5vh;
+}
+
+.manage-element {
+    display: flex;
+    padding: 1rem;
+}
+
+.add-element {
+    display: flex;
+    flex-direction: row;
+    margin-right: 5rem;
+    gap: 1.5rem;    
+}
+
+.tools {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.tools > * {
+    align-items: center;
+}
+
+.nav-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.manage-element img {
+    width: 2.5rem;
+}
+
+.tools img {
+    width: 1.5rem;
+}
+
+select {
+    padding: 0.3rem 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#font-size {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0.2rem 0.1rem;
+    text-align: center;
+    width: 3rem;
+}
+
+.tool-active {
+    background-color: #e3c196;
+    border: 2px solid #9bc8ff;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+.border-style {
+    display: flex;
+}
+
+.border-width, .border-radius {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+#border-width-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 3px solid black;
+}
+
+.border-type {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin: 0 1rem;
+}
+
+.border-div {
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 2px solid black;
+}
+
+
+#border-radius-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: solid black;
+    border-width: 3px 0 0 2px;
+    border-radius: 20px 0 0 0;
+
+}
+
+.slider {
+    width: 5rem;
+}
