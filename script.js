@@ -7,6 +7,7 @@ const selectShapeType = document.querySelector('.select-shape-type')
 
 let addElementToggle = 'none'; // text, image, shape, none
 let drawShape = 'none'; // none, triangle, rectangle, oval
+let imgFile, img;
 
 function getAdjustedMousePos(e) {
     const rect = businessCard.getBoundingClientRect();
@@ -61,8 +62,22 @@ addElement.addEventListener('click', e => {
         if (e.target.parentElement.classList == 'text-element') {
             addElementToggle = 'text';
             businessCard.style.cursor = 'text';
+        
         } else if (e.target.parentElement.classList == 'image-element') {
             addElementToggle = 'image';
+
+            var input = document.createElement('input');
+            input.type = 'file';
+
+            input.onchange = e => { 
+                imgFile = e.target.files[0]; 
+                
+                img = new Image();
+                img.src = imgFile.name;
+            }
+
+            input.click();
+
         } else if (e.target.parentElement.classList == 'shapes-element') {
             addElementToggle = 'shape';
             businessCard.style.cursor = 'crosshair';
@@ -74,6 +89,9 @@ addElement.addEventListener('click', e => {
         }, 100);
     }
 });
+
+let isDrawing = false;
+let startX, startY;
 
 selectShapeType.addEventListener('click', e => {
     if (addElementToggle == 'shape') {
@@ -88,8 +106,22 @@ selectShapeType.addEventListener('click', e => {
     }
 });
 
-let isDrawing = false;
-let startX, startY;
+businessCard.addEventListener('click', (e) => {
+    if (addElementToggle == 'text') {
+        const pos = getAdjustedMousePos(e);
+        startX = pos.x;
+        startY = pos.y;
+
+        let text = prompt('Enter Text');
+        c.font = "16px Arial";
+        c.fillText(text, startX, startY);
+
+    } else if (addElementToggle == 'image') {
+        c.drawImage(img, startX, startY);
+    }
+
+    addElementToggle = 'none';
+})
 
 businessCard.addEventListener('mousedown', (e) => {
     isDrawing = true;
@@ -124,7 +156,9 @@ businessCard.addEventListener('mousemove', (e) => {
 
 businessCard.addEventListener('mouseup', () => {
     isDrawing = false;
-    addElementToggle = 'none';
-    drawShape = 'none';
-    businessCard.style.cursor = 'pointer';
+    if (addElementToggle == 'shape') {
+        addElementToggle = 'none';
+        drawShape = 'none';
+    }
+    businessCard.style.cursor = 'default';
 });
